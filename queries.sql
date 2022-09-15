@@ -39,7 +39,7 @@ COMMIT;
 SELECT * FROM animals;
 
 BEGIN;
-DELETE animals;
+DROP TABLE animals;
 ROLLBACK;
 COMMIT;
 SELECT * FROM animals;
