@@ -1,14 +1,23 @@
-CREATE TABLE owners (
-    owners_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    full_name VARCHAR(150) NOT NULL,
-    owners_age INT
+CREATE TABLE vets (
+    id INT GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(50),
+    age INT,
+    date_of_graduation DATE,
+    PRIMARY KEY (id)
 );
 
-CREATE TABLE species (
-    species_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    name VARCHAR(150) NOT NULL
+CREATE TABLE specializations (
+    vet_id INT,
+    specie_id INT,
+    FOREIGN KEY (vet_id) REFERENCES vets(id),
+    FOREIGN KEY (specie_id) REFERENCES species(species_id)
 );
 
-ALTER TABLE animals DROP COLUMN species;
-ALTER TABLE animals ADD COLUMN species_id INT REFERENCES species(species_id);
-ALTER TABLE animals ADD COLUMN owners_id INT REFERENCES owners(owners_id);
+CREATE TABLE visits (
+    animals_id INT,
+    vet_id INT,
+    day_of_visit DATE,
+    FOREIGN KEY (animals_id) REFERENCES animals(id),
+    FOREIGN KEY (vets_id) REFERENCES vets(id)
+);
+

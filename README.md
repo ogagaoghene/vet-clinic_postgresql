@@ -1,7 +1,6 @@
 # VETERINARY CLINIC
-PostgreSQL - an open source relational database management system was used to create the database for a vet clinic. Two relations- owners and species were created in addition to animals relation. The relation - "animals" was altered to drop column species, and to reference species_id and owners_id.
-Records were inserted into species and owners relations, and animals relation was updated and queried with the species and owners relations to answer specific questions based on their relationships.
-
+PostgreSQL an open source relational database management system was used to create the database for a vet clinic. The concept of relationships is introduced by creating three additional relations - visits, specializations, and vets to demonstrate many-to-many relationship by writing complex queries
+to provide answers to specific questions.
 
 ## Getting Started
 . [Installing PostgreSQL](https://www.postgresql.org/download/)
