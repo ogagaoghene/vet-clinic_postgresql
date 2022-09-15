@@ -1,6 +1,7 @@
 # VETERINARY CLINIC
-PostgreSQL an open source relational database management system was used to create the database for a vet clinic. The relation - "animals" in the database was created using PostgreSQL DDL and DML Commands.
-The animals table is altered by addding species field. Additional records were inserted into the animals table and queried with aggregate functions count, average, min, max to display relevant information. Transactions were made with SAVEPOINT and COMMIT statements.
+PostgreSQL - an open source relational database management system was used to create the database for a vet clinic. Two relations- owners and species were created in addition to animals relation. The relation - "animals" was altered to drop column species, and to reference species_id and owners_id.
+Records were inserted into species and owners relations, and animals relation was updated and queried with the species and owners relations to answer specific questions based on their relationships.
+
 
 ## Getting Started
 . [Installing PostgreSQL](https://www.postgresql.org/download/)
