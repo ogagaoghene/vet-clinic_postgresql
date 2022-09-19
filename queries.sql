@@ -70,3 +70,7 @@ JOIN species s ON a.species_id = s.species_id
 WHERE v.vet_id = (SELECT id FROM vets WHERE name LIKE 'Maisy Smith')
 GROUP BY s.name;
 
+--Audit Runtime
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animals_id = 4;
+EXPLAIN ANALYZE SELECT * FROM visits where vets_id = 2;
+EXPLAIN ANALYSE SELECT * FROM owners where email = 'owner_18327@mail.com';
