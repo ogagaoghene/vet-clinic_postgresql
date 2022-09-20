@@ -38,7 +38,15 @@ treatment_id INT  REFERENCES treatment(id)
 -- Many to many relationship
 
 CREATE TABLE medical_treatment_history (
-    medical_history_id INT REFERENCES medical_histories(id),
-    treatment_id INT REFERENCES treatments(id)
+medical_history_id INT REFERENCES medical_histories(id),
+treatment_id INT REFERENCES treatments(id)
 );
 
+-- indexes
+
+CREATE INDEX patient_index ON medical_histories(patient_id);
+CREATE INDEX medical_history_index ON invoices(medical_history_id);
+CREATE INDEX invoice_index ON invoice_items(invoice_id);
+CREATE INDEX treatment_index ON invoice_items(treatment_id);
+CREATE INDEX medical_history_index ON medial_treatments(medical_history_id);
+CREATE INDEX treatment_index ON medial_treatments(treatment_id);
