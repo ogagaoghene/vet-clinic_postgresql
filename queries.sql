@@ -74,3 +74,11 @@ GROUP BY s.name;
 EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animals_id = 4;
 EXPLAIN ANALYZE SELECT * FROM visits where vets_id = 2;
 EXPLAIN ANALYSE SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+--  CREATE INDEXES 
+ CREATE INDEX ON visits (animals_id); 
+ CREATE INDEX ON visits (vet_id); 
+ CREATE INDEX ON owners (email);
+ 
+
+ 
