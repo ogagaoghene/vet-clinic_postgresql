@@ -2,6 +2,7 @@
 
 PostgreSQL an open source relational database management system was used to create the database for a vet clinic. The concept of relationships is introduced by creating three additional relations - visits, specializations, and vets to demonstrate many-to-many relationship by writing complex queries
 to provide answers to specific questions.
+We created an entity relationship diagram to show how the different tables and how they are related in the database so as to have a better understanding of their relationships conceptually.
 
 ## Getting Started
 
