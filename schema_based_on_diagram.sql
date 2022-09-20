@@ -33,3 +33,12 @@ total_price DECIMAL,
 invoice_id INT REFERENCES invoices(id),
 treatment_id INT  REFERENCES treatment(id)
 );
+
+
+-- Many to many relationship
+
+CREATE TABLE medical_treatment_history (
+    medical_history_id INT REFERENCES medical_histories(id),
+    treatment_id INT REFERENCES treatments(id)
+);
+
